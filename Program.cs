@@ -19,7 +19,7 @@ do
             else {
                 string pv;
                 if (listaPersonas[m].PuedeVotar()) pv="P"; else pv="No p";
-                Console.WriteLine ("A continuacion los datos de la persona cuyo DNI es: " + listaPersonas[m].DNI + "\nNombre y Apellido: " + listaPersonas[m].nombre +" "+ listaPersonas[m].apellido + "\nSu fecha de nacimiento es : " + listaPersonas[m].fnac + "Y su edad es " + listaPersonas[m].ObtenerEdad() + ". \n" + pv +"uede votar" + "\nCorreo electronico: "+listaPersonas[m].email);
+                Console.WriteLine ("A continuacion los datos de la persona cuyo DNI es: " + listaPersonas[m].DNI + "\nNombre y Apellido: " + listaPersonas[m].nombre +" "+ listaPersonas[m].apellido + "\nSu fecha de nacimiento es: " + listaPersonas[m].fnac + " Y su edad es " + listaPersonas[m].ObtenerEdad() + ". \n" + pv +"uede votar" + "\nCorreo electronico: "+listaPersonas[m].email);
             }
             break;
         case 4:
@@ -55,9 +55,8 @@ static void AnadirPersonaLista(ref List<Persona> lp)
         }
     } while (v);
 
-//TODO: validar q no sea vacio
-    Console.Write("Ingrese apellido: "); string ap = Console.ReadLine();
-    Console.Write("Ingrese nombre: "); string nom = Console.ReadLine();
+    Console.Write("Ingrese apellido: "); string ap; do{ap = Console.ReadLine();} while(ap.Length<0);
+    Console.Write("Ingrese nombre: ");string nom; do{ nom= Console.ReadLine();}while(nom.Length<0);
 
     DateTime fechaNacimiento = new DateTime();
     do
@@ -88,13 +87,13 @@ static void MostrarEstadisticasDelCenso(List<Persona> lp)
 
     Console.WriteLine("Promedio de edad: " + sed / lp.Count);
     }
-    else Console.WriteLine("La lista de personas esta vacia");
+    else Console.WriteLine("Aun no hay personas");
 
 }
 
 static int BuscarPersona(List<Persona> lp) {
-
-//NO SE ENCUENTRA EL DNI ERROR ARREGLAR TODO
+    
+    if(lp.Any()) {
     Console.Write("Ingrese el Numero de documento de la personque que quiere buscar. ");
     int numeroDeDocumentoDeLaPersonaQueQuiereBuscar; bool v;
     do{v= int.TryParse(Console.ReadLine(), out numeroDeDocumentoDeLaPersonaQueQuiereBuscar);}while(!v);
@@ -109,12 +108,14 @@ static int BuscarPersona(List<Persona> lp) {
         
     }
     return i;
-
+    }
+    else Console.WriteLine("Aun no hay personas");
     
     
 }
 
 static void ModificarMail(ref List<Persona> lp) {
+    //ERROR si no se encuentra el programa sigue arreglar
     Console.WriteLine("Se buscara a la persona cuyo correo electronico quiere cambiar.");
     int m=BuscarPersona(lp);
 
