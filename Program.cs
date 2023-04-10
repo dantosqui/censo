@@ -56,8 +56,8 @@ static void AnadirPersonaLista(ref List<Persona> lp)
         }
     } while (v);
 
-    Console.Write("Ingrese apellido: "); string ap; do{ap = Console.ReadLine();} while(ap.Length<0);
-    Console.Write("Ingrese nombre: ");string nom; do{ nom= Console.ReadLine();}while(nom.Length<0);
+    string ap;  do{Console.Write("Ingrese apellido: "); ap = Console.ReadLine();} while(ap.Length<=0);
+    string nom; do{Console.Write("Ingrese nombre: "); nom= Console.ReadLine();}while(nom.Length<=0);
 
     DateTime fechaNacimiento = new DateTime();
     do
