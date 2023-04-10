@@ -16,6 +16,7 @@ do
         case 3:
             int m = BuscarPersona(listaPersonas);
             if (m==listaPersonas.Count) Console.WriteLine("No se encontro el DNI");
+            else if (m==-1) Console.WriteLine("Aun no hay personas");
             else {
                 string pv;
                 if (listaPersonas[m].PuedeVotar()) pv="P"; else pv="No p";
@@ -109,16 +110,17 @@ static int BuscarPersona(List<Persona> lp) {
     }
     return i;
     }
-    else Console.WriteLine("Aun no hay personas");
+    else return -1;
     
     
 }
 
 static void ModificarMail(ref List<Persona> lp) {
-    //ERROR si no se encuentra el programa sigue arreglar
     Console.WriteLine("Se buscara a la persona cuyo correo electronico quiere cambiar.");
     int m=BuscarPersona(lp);
 
-    Console.Write("Ingrese el nuevo Email: ");
-    lp[m].email=Console.ReadLine();
+    if (m==lp.Count) Console.WriteLine("No se encontro el DNI");
+    else if (m==-1) Console.WriteLine("Aun no hay personas");
+    else{Console.Write("Ingrese el nuevo Email: ");
+    lp[m].email=Console.ReadLine();}
 }
