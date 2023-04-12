@@ -8,24 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\47573312\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Dante\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "Z:\\Programacion4\\censocenso\\censocenso.csproj",
+      "projectUniqueName": "C:\\Users\\Dante\\Downloads\\censocensocenso\\censo\\censocenso.csproj",
       "projectName": "censocenso",
-      "projectPath": "Z:\\Programacion4\\censocenso\\censocenso.csproj",
-      "packagesPath": "C:\\Users\\47573312\\.nuget\\packages\\",
-      "outputPath": "Z:\\Programacion4\\censocenso\\obj\\",
+      "projectPath": "C:\\Users\\Dante\\Downloads\\censocensocenso\\censo\\censocenso.csproj",
+      "packagesPath": "C:\\Users\\Dante\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dante\\Downloads\\censocensocenso\\censo\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\47573312\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Dante\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -56,7 +51,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -65,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
