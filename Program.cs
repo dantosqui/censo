@@ -121,6 +121,6 @@ static void ModificarMail(ref List<Persona> lp) {
 
     if (m==lp.Count) Console.WriteLine("No se encontró el DNI");
     else if (m==-1) Console.WriteLine("Aún no hay personas");
-    else{Console.Write("Ingrese el nuevo Email: ");
+    else{Console.Write("Ingrese el nuevo correo de " + lp[m].nombre + " " + lp[m].apellido + ": ");
     lp[m].email=Console.ReadLine();}
 }
